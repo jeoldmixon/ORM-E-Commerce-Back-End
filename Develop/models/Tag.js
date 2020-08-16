@@ -6,14 +6,19 @@ class Tag extends Model {}
 
 Tag.init(
   {
-    // define columns
+    // define columns see book work models folder
     id: {
+      // Integer
       type: DataTypes.INTEGER,
-      autoIncrement: true,
-      primaryKey: true,
+      // Doesn't allow null values
       allowNull: false,
+      // Set as primary key
+      primaryKey: true,
+      // Uses auto increment
+      autoIncrement: true,
     },
     tag_name: {
+      // String
       type: DataTypes.STRING,
     },
   },
