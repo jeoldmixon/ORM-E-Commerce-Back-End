@@ -1,28 +1,26 @@
 {
-  "name": "module-13-challenge-orm",
-  "version": "1.0.0",
-  "description": "",
+  "name": "module-13-challenge",
+  "version": "1.1.1",
+  "description": "Module 13 challenge- OPM",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js",
-    "watch": "nodemon server.js",
-    "seed": "node seeds/index.js"
+    "test": "echo readme2.txt",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git@work.github.com:coding-boot-camp/module-13-challenge-orm.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "shopping"
+  ],
+  "author": "Justin Oldmixon",
   "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^2.0.3"
-  },
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mysql2": "^2.1.0",
-    "sequelize": "^5.21.7"
+    "nodemon": "^2.0.4",
+    "sequelize": "^6.3.4"
   }
 }
