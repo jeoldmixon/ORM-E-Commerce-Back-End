@@ -1,13 +1,18 @@
+## Deliverables
+
+https://github.com/jeoldmixon/ORM-E-Commerce-Back-End
+
+## Walkthrough Video
+
 # 13 Object Relational Mapping (ORM): E-commerce Back End
 
-Internet retail, also known as e-commerce, is the largest sector of the electronics industry, generating an estimated US$29 trillion in 2019. E-commerce platforms, such as Shopify and WooCommerce, provide a suite of services to businesses of all sizes. Due to the prevalence of these platforms, it's a good idea for developers to understand the fundamental architecture of e-commerce sites.
+Internet retail, also known as e-commerce, is the largest sector of the electronics industry, generating an estimated US\$29 trillion in 2019. E-commerce platforms, such as Shopify and WooCommerce, provide a suite of services to businesses of all sizes. Due to the prevalence of these platforms, it's a good idea for developers to understand the fundamental architecture of e-commerce sites.
 
 Your challenge is to build the back end for an e-commerce site. You’ll take a working Express.js API and configure it to use Sequelize to interact with a MySQL database.
 
 Because this application won’t be deployed, you’ll also need to provide a link to a walkthrough video that demonstrates its functionality and all of the acceptance criteria below being met. You’ll need to submit a link to the video and add it to the README of your project.
 
 Before you start, clone the [starter code](https://github.com/coding-boot-camp/fantastic-umbrella).
-
 
 ## User Story
 
@@ -55,7 +60,6 @@ The final animation shows the POST, PUT, and DELETE routes for categories being 
 
 Your walkthrough video should also show the POST, PUT, and DELETE routes for products and tags being tested in Insomnia.
 
-
 ## Getting Started
 
 You’ll need to use the [MySQL2](https://www.npmjs.com/package/mysql2) and [Sequelize](https://www.npmjs.com/package/sequelize) packages to connect your Express.js API to a MySQL database and the [Dotenv package](https://www.npmjs.com/package/dotenv) to use environment variables to store sensitive data, like your MySQL username, password, and database name.
@@ -66,83 +70,91 @@ Use the `schema.sql` file in the `db` folder to create your database using MySQL
 
 Your database should contain the following four models, including the requirements listed for each model:
 
-* `Category`
+- `Category`
 
-  * `id`
-    * Integer
-    * Doesn't allow null values
-    * Set as primary key
-    * Use auto increment
+  - `id`
 
-  * `category_name`
-    * String
-    * Doesn't allow null values
+    - Integer
+    - Doesn't allow null values
+    - Set as primary key
+    - Use auto increment
 
-* `Product`
+  - `category_name`
+    - String
+    - Doesn't allow null values
 
-  * `id`
-    * Integer
-    * Don't allow null values
-    * Set as primary key
-    * Use auto increment
+- `Product`
 
-  * `product_name`
-    * String
-    * Doesn't allow null values
+  - `id`
 
-  * `price`
-    * Decimal
-    * Doesn't allow null values
-    * Validate that the value is a decimal
+    - Integer
+    - Don't allow null values
+    - Set as primary key
+    - Use auto increment
 
-  * `stock`
-    * Integer
-    * Doesn't allow null values
-    * Set a default value of 10
-    * Validate that the value is numeric
+  - `product_name`
 
-  * `category_id`
-    * Integer
-    * Reference the `category` model's `id` 
+    - String
+    - Doesn't allow null values
 
-* `Tag`
+  - `price`
 
-  * `id`
-    * Integer
-    * Don't allow null values
-    * Set as primary key
-    * Use auto increment
+    - Decimal
+    - Doesn't allow null values
+    - Validate that the value is a decimal
 
-  * `tag_name`
-    * String
+  - `stock`
 
-* `ProductTag`
+    - Integer
+    - Doesn't allow null values
+    - Set a default value of 10
+    - Validate that the value is numeric
 
-  * `id`
-    * Integer
-    * Don't allow null values
-    * Set as primary key
-    * Use auto increment
+  - `category_id`
+    - Integer
+    - Reference the `category` model's `id`
 
-  * `product_id`
-    * Integer
-    * Reference the `product` model's `id`
+- `Tag`
 
-  * `tag_id`
-    * Integer
-    * Reference the `tag` model's `id`
+  - `id`
+
+    - Integer
+    - Don't allow null values
+    - Set as primary key
+    - Use auto increment
+
+  - `tag_name`
+    - String
+
+- `ProductTag`
+
+  - `id`
+
+    - Integer
+    - Don't allow null values
+    - Set as primary key
+    - Use auto increment
+
+  - `product_id`
+
+    - Integer
+    - Reference the `product` model's `id`
+
+  - `tag_id`
+    - Integer
+    - Reference the `tag` model's `id`
 
 ### Associations
 
 You'll need to execute association methods on your Sequelize models to create the following relationships between them:
 
-* `Product` belongs to `Category`, as a Category can have multiple Products but a Product can only belong to one Category
+- `Product` belongs to `Category`, as a Category can have multiple Products but a Product can only belong to one Category
 
-* `Category` has many `Product`
+- `Category` has many `Product`
 
-* `Product` belongs to many `Tag`, using the `ProductTag` through model, allow Products to have multiple Tags and Tags have many Products
+- `Product` belongs to many `Tag`, using the `ProductTag` through model, allow Products to have multiple Tags and Tags have many Products
 
-* `Tag` belongs to many `Product`
+- `Tag` belongs to many `Product`
 
 > **Hint:** Make sure you set up foreign key relationships that match the column we created in the respective models.
 
@@ -162,14 +174,14 @@ After creating the models and routes, run `npm run seed` to seed data to your da
 
 Create the code needed in `server.js` to sync our Sequelize models to our MySQL database on server start.
 
-
 ## Review
 
 You are required to submit BOTH of the following for review:
 
-* A walkthrough video demonstrating the functionality of the application and all of the acceptance criteria being met.
+- A walkthrough video demonstrating the functionality of the application and all of the acceptance criteria being met.
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+- The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
 
-- - -
+---
+
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
