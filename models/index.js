@@ -20,7 +20,7 @@ Category.hasMany(Product, {
 // Product belongs to many Tag models. Using the ProductTag through model, allow products to have multiple tags and tags to have many products.
 Product.belongsToMany(Tag, {
   through: ProductTag,
-  as: "product_tags",
+  // as: "product_tags",
   foreignKey: "product_id",
 });
 // Tags belongToMany Products (through ProductTag)
