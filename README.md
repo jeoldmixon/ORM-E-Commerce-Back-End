@@ -4,6 +4,8 @@ https://github.com/jeoldmixon/ORM-E-Commerce-Back-End
 
 ## Walkthrough Video
 
+https://drive.google.com/file/d/12gK4z7gxmERFLDzqzGqiL-nYCzJnP5j7/view
+
 # 13 Object Relational Mapping (ORM): E-commerce Back End
 
 Internet retail, also known as e-commerce, is the largest sector of the electronics industry, generating an estimated US\$29 trillion in 2019. E-commerce platforms, such as Shopify and WooCommerce, provide a suite of services to businesses of all sizes. Due to the prevalence of these platforms, it's a good idea for developers to understand the fundamental architecture of e-commerce sites.
